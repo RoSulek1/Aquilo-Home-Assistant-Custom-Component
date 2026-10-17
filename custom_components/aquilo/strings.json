@@ -1,0 +1,50 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Aquilo Septic Tank Monitor",
+        "description": "Configure your Aquilo septic tank level monitor device.",
+        "data": {
+          "host": "Device IP or Hostname (e.g., 192.168.1.150)",
+          "name": "Tank Name (e.g., Szambo)",
+          "scan_interval": "Update Interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Aquilo device. Verify IP address and network connectivity.",
+      "invalid_response": "Received invalid response from the device. Ensure the device serves /state endpoint.",
+      "unknown": "An unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This Aquilo device is already configured in Home Assistant."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Aquilo Options",
+        "description": "Adjust integration settings.",
+        "data": {
+          "scan_interval": "Update Interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "level": {
+        "name": "Level"
+      },
+      "percentage": {
+        "name": "Percentage"
+      },
+      "last_read": {
+        "name": "Last Read"
+      },
+      "min_interval": {
+        "name": "Time Since Read"
+      }
+    }
+  }
+}

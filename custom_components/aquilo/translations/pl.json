@@ -1,0 +1,50 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Czujnik poziomu szamba Aquilo",
+        "description": "Skonfiguruj połączenie z czujnikiem poziomu Aquilo.",
+        "data": {
+          "host": "Adres IP lub nazwa hosta urządzenia",
+          "name": "Nazwa zbiornika (np. Szambo)",
+          "scan_interval": "Częstotliwość odpytywania (w sekundach)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Nie udało się połączyć z urządzeniem Aquilo. Sprawdź adres IP oraz połączenie sieciowe.",
+      "invalid_response": "Otrzymano nieprawidłową odpowiedź. Upewnij się, że urządzenie udostępnia endpoint /state.",
+      "unknown": "Wystąpił nieoczekiwany błąd."
+    },
+    "abort": {
+      "already_configured": "To urządzenie Aquilo jest już skonfigurowane w Home Assistant."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opcje Aquilo",
+        "description": "Dostosuj parametry integracji.",
+        "data": {
+          "scan_interval": "Częstotliwość odpytywania (w sekundach)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "level": {
+        "name": "Poziom"
+      },
+      "percentage": {
+        "name": "Procent"
+      },
+      "last_read": {
+        "name": "Ostatni odczyt"
+      },
+      "min_interval": {
+        "name": "Czas od odczytu"
+      }
+    }
+  }
+}

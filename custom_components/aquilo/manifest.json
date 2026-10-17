@@ -1,0 +1,12 @@
+{
+  "domain": "aquilo",
+  "name": "Aquilo Septic Tank Monitor",
+  "codeowners": ["@RoSulek1"],
+  "config_flow": true,
+  "documentation": "https://github.com/RoSulek1/HA-Aquilo",
+  "issue_tracker": "https://github.com/RoSulek1/HA-Aquilo/issues",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "requirements": [],
+  "version": "1.0.0"
+}

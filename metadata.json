@@ -1,0 +1,6 @@
+{
+  "name": "HA-Aquilo — Home Assistant Custom Component",
+  "description": "Custom component dla HACS do obsługi czujnika poziomu szamba i wody Aquilo z Config Flow.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
