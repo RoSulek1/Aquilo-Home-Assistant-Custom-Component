@@ -43,9 +43,13 @@ export const ExportSyncTab: React.FC = () => {
           null,
           2
         ),
-        'README.md': `# Aquilo Septic Tank Monitor for Home Assistant
+        'README.md': `<p align="center">
+  <img src="logo.svg" alt="Aquilo Logo" width="220" />
+</p>
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=RoSulek1&repository=HA-Aquilo&category=integration)
+# Aquilo Septic Tank Monitor for Home Assistant
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=RoSulek1&repository=Aquilo-Home-Assistant-Custom-Component&category=integration)
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
 
@@ -68,8 +72,8 @@ Home Assistant custom component for the **Aquilo Septic Tank & Water Level Monit
               name: 'Aquilo Septic Tank Monitor',
               codeowners: ['@RoSulek1'],
               config_flow: true,
-              documentation: 'https://github.com/RoSulek1/HA-Aquilo',
-              issue_tracker: 'https://github.com/RoSulek1/HA-Aquilo/issues',
+              documentation: 'https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component',
+              issue_tracker: 'https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component/issues',
               integration_type: 'device',
               iot_class: 'local_polling',
               requirements: [],
@@ -160,7 +164,7 @@ git push -u origin main`;
             <FolderGit2 className="w-5 h-5 text-indigo-400" />
             <div>
               <h3 className="text-base font-bold text-white">
-                Wypchnięcie kodu do https://github.com/RoSulek1/HA-Aquilo
+                Wypchnięcie kodu do https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component
               </h3>
               <p className="text-xs text-slate-400">
                 Wszystkie pliki zostały już utworzone w środowisku. Wykonaj poniższe polecenia:
@@ -201,7 +205,7 @@ git push -u origin main`;
           <ol className="text-xs text-slate-300 space-y-2 list-decimal pl-5">
             <li>Otwórz Home Assistant i przejdź do <strong>HACS</strong>.</li>
             <li>Kliknij <strong>trzy kropki</strong> w prawym górnym rogu -&gt; <strong>Niestandardowe repozytoria (Custom repositories)</strong>.</li>
-            <li>Wklej URL: <code className="text-indigo-300 font-mono">https://github.com/RoSulek1/HA-Aquilo</code></li>
+            <li>Wklej URL: <code className="text-indigo-300 font-mono">https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component</code></li>
             <li>Wybierz Kategorię: <strong>Integracja (Integration)</strong> i kliknij <strong>Dodaj</strong>.</li>
             <li>Pobierz integrację i uruchom ponownie Home Assistant.</li>
           </ol>

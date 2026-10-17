@@ -18,7 +18,7 @@ interface ConnectGuideTabProps {
 }
 
 export const ConnectGuideTab: React.FC<ConnectGuideTabProps> = ({ onSwitchToExplorer }) => {
-  const [repoUrl, setRepoUrl] = useState('https://github.com/RoSulek1/HA-Aquilo.git');
+  const [repoUrl, setRepoUrl] = useState('https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component.git');
   const [branch, setBranch] = useState('main');
   const [commitMsg, setCommitMsg] = useState('feat: initial release of Aquilo Home Assistant custom component with Config Flow');
   const [authType, setAuthType] = useState<'https' | 'pat' | 'ssh'>('https');

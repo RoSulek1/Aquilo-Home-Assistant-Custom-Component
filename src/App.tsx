@@ -36,16 +36,16 @@ export default function App() {
           <div className="flex items-center space-x-2">
             <Github className="w-4 h-4 text-slate-400" />
             <span className="font-medium text-slate-400">
-              HA-Aquilo — Home Assistant Custom Component
+              Aquilo — Home Assistant Custom Component
             </span>
             <span>•</span>
             <a
-              href="https://github.com/RoSulek1/HA-Aquilo"
+              href="https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component"
               target="_blank"
               rel="noreferrer"
               className="text-indigo-400 hover:underline"
             >
-              github.com/RoSulek1/HA-Aquilo
+              github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component
             </a>
           </div>
 

@@ -14,14 +14,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-500 to-emerald-400 p-0.5 shadow-lg shadow-indigo-500/20 flex items-center justify-center">
-              <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center text-white font-bold text-xs">
-                HA
-              </div>
-            </div>
+            <img
+              src="/logo.svg"
+              alt="Aquilo Logo"
+              className="w-12 h-8 rounded-lg shadow-md border border-slate-700 object-cover"
+            />
             <div>
               <div className="flex items-center space-x-2">
-                <span className="font-bold text-lg text-white tracking-tight">HA-Aquilo Studio</span>
+                <span className="font-bold text-lg text-white tracking-tight">Aquilo Studio</span>
                 <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/30">
                   HACS Component
                 </span>
@@ -33,13 +33,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
           {/* GitHub Repo Link */}
           <div className="flex items-center space-x-2">
             <a
-              href="https://github.com/RoSulek1/HA-Aquilo"
+              href="https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center space-x-1.5 text-xs font-semibold text-slate-200 hover:text-white bg-slate-900 hover:bg-slate-800 border border-slate-700/80 px-3.5 py-1.5 rounded-lg transition-colors"
             >
               <Github className="w-3.5 h-3.5 text-indigo-400" />
-              <span>RoSulek1/HA-Aquilo</span>
+              <span>RoSulek1/Aquilo-Home-Assistant-Custom-Component</span>
             </a>
           </div>
         </div>

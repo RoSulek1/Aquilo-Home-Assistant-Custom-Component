@@ -1,6 +1,10 @@
+<p align="center">
+  <img src="logo.svg" alt="Aquilo Logo" width="220" />
+</p>
+
 # Aquilo Septic Tank Monitor for Home Assistant
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=RoSulek1&repository=HAquilo-Home-Assistant-Custom-Component&category=integration)
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=RoSulek1&repository=Aquilo-Home-Assistant-Custom-Component&category=integration)
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
 [![GitHub Release](https://img.shields.io/github/v/release/RoSulek1/Aquilo-Home-Assistant-Custom-Component?style=for-the-badge&color=blue)](https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component/releases)

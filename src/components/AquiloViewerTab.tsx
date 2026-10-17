@@ -219,8 +219,8 @@ class AquiloDataUpdateCoordinator(DataUpdateCoordinator[Dict[str, Any]]):
   "name": "Aquilo Septic Tank Monitor",
   "codeowners": ["@RoSulek1"],
   "config_flow": true,
-  "documentation": "https://github.com/RoSulek1/HA-Aquilo",
-  "issue_tracker": "https://github.com/RoSulek1/HA-Aquilo/issues",
+  "documentation": "https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component",
+  "issue_tracker": "https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component/issues",
   "integration_type": "device",
   "iot_class": "local_polling",
   "requirements": [],
@@ -232,12 +232,16 @@ class AquiloDataUpdateCoordinator(DataUpdateCoordinator[Dict[str, Any]]):
       path: 'README.md',
       desc: 'Dokumentacja po angielsku z oficjalnym przyciskiem "Add to My Home Assistant", instrukcją HACS oraz przykładami kart Lovelace.',
       icon: FileText,
-      content: `# Aquilo Septic Tank Monitor for Home Assistant
+      content: `<p align="center">
+  <img src="logo.svg" alt="Aquilo Logo" width="220" />
+</p>
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=RoSulek1&repository=HA-Aquilo&category=integration)
+# Aquilo Septic Tank Monitor for Home Assistant
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=RoSulek1&repository=Aquilo-Home-Assistant-Custom-Component&category=integration)
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
-[![GitHub Release](https://img.shields.io/github/v/release/RoSulek1/HA-Aquilo?style=for-the-badge&color=blue)](https://github.com/RoSulek1/HA-Aquilo/releases)
+[![GitHub Release](https://img.shields.io/github/v/release/RoSulek1/Aquilo-Home-Assistant-Custom-Component?style=for-the-badge&color=blue)](https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component/releases)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green.svg?style=for-the-badge)](LICENSE)
 
 Home Assistant custom component for the **Aquilo Septic Tank & Water Level Monitor**.`,
@@ -259,22 +263,29 @@ Home Assistant custom component for the **Aquilo Septic Tank & Water Level Monit
 
   return (
     <div className="space-y-6 max-w-6xl mx-auto pb-12">
-      {/* Top Banner with My Home Assistant Button */}
+      {/* Top Banner with Aquilo Logo & My Home Assistant Button */}
       <div className="rounded-2xl bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950 border border-indigo-500/30 p-6 shadow-xl">
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-          <div className="space-y-2">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-semibold">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Custom Component HACS Gotowy: HA-Aquilo</span>
+          <div className="flex items-start sm:items-center space-x-4">
+            <img
+              src="/logo.svg"
+              alt="Aquilo Logo"
+              className="w-24 h-16 rounded-xl border border-slate-700 shadow-lg object-cover shrink-0"
+            />
+            <div className="space-y-1.5">
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-semibold">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Custom Component HACS Gotowy: Aquilo</span>
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                Aquilo Septic Tank Monitor
+              </h1>
+              <p className="text-xs sm:text-sm text-slate-300 max-w-2xl">
+                Repozytorium: <code className="text-indigo-300 font-mono">https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component</code>
+                <br />
+                Zastępuje stare sensory YAML pełną obsługą Config Flow, kafelkiem urządzenia i automatycznym odświeżaniem.
+              </p>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              Aquilo Septic Tank Monitor
-            </h1>
-            <p className="text-xs sm:text-sm text-slate-300 max-w-2xl">
-              Repozytorium: <code className="text-indigo-300 font-mono">https://github.com/RoSulek1/HA-Aquilo</code>
-              <br />
-              Zastępuje stare sensory YAML pełną obsługą Config Flow, kafelkiem urządzenia i automatycznym odświeżaniem.
-            </p>
           </div>
 
           {/* Official Add to My Home Assistant Button */}
@@ -283,7 +294,7 @@ Home Assistant custom component for the **Aquilo Septic Tank & Water Level Monit
               Przycisk &quot;My Home Assistant&quot;:
             </span>
             <a
-              href="https://my.home-assistant.io/redirect/hacs_repository/?owner=RoSulek1&repository=HA-Aquilo&category=integration"
+              href="https://my.home-assistant.io/redirect/hacs_repository/?owner=RoSulek1&repository=Aquilo-Home-Assistant-Custom-Component&category=integration"
               target="_blank"
               rel="noreferrer"
               className="inline-block transition-transform hover:scale-105"
