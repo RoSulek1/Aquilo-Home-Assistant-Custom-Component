@@ -1,9 +1,9 @@
 # Aquilo Septic Tank Monitor for Home Assistant
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=RoSulek1&repository=HA-Aquilo&category=integration)
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=RoSulek1&repository=HAquilo-Home-Assistant-Custom-Component&category=integration)
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
-[![GitHub Release](https://img.shields.io/github/v/release/RoSulek1/HA-Aquilo?style=for-the-badge&color=blue)](https://github.com/RoSulek1/HA-Aquilo/releases)
+[![GitHub Release](https://img.shields.io/github/v/release/RoSulek1/Aquilo-Home-Assistant-Custom-Component?style=for-the-badge&color=blue)](https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component/releases)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green.svg?style=for-the-badge)](LICENSE)
 
 Home Assistant custom component for the **Aquilo Septic Tank & Water Level Monitor** (Czujnik poziomu szamba i wody Aquilo).
@@ -33,12 +33,12 @@ This integration replaces manual YAML REST and template sensors with a native **
 
 1. Click the **Add to My Home Assistant** button:
 
-   [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=RoSulek1&repository=HA-Aquilo&category=integration)
+   [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=RoSulek1&repository=Aquilo-Home-Assistant-Custom-Component&category=integration)
 
 2. Or manually in HACS:
    - Open **HACS** in your Home Assistant.
    - Click the three dots in the top right corner and select **Custom repositories**.
-   - Paste repository URL: `https://github.com/RoSulek1/HA-Aquilo`
+   - Paste repository URL: `https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component`
    - Select Type: **Integration**
    - Click **Add**, find **Aquilo Septic Tank Monitor**, and click **Download**.
 3. **Restart Home Assistant**.
@@ -47,7 +47,7 @@ This integration replaces manual YAML REST and template sensors with a native **
 
 ### Option 2: Manual Installation
 
-1. Download the latest release ZIP from the [Releases](https://github.com/RoSulek1/HA-Aquilo/releases) page.
+1. Download the latest release ZIP from the [Releases](https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component/releases) page.
 2. Copy the `custom_components/aquilo` directory into your Home Assistant `<config>/custom_components/` folder:
    ```
    config/
