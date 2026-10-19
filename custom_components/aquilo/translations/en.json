@@ -9,6 +9,14 @@
           "name": "Tank Name",
           "scan_interval": "Update Interval (seconds)"
         }
+      },
+      "reconfigure": {
+        "title": "Reconfigure Aquilo Device",
+        "description": "Update IP address or settings for your Aquilo septic tank monitor.",
+        "data": {
+          "host": "Device IP or Hostname",
+          "scan_interval": "Update Interval (seconds)"
+        }
       }
     },
     "error": {
@@ -17,18 +25,23 @@
       "unknown": "An unexpected error occurred."
     },
     "abort": {
-      "already_configured": "This Aquilo device is already configured in Home Assistant."
+      "already_configured": "This Aquilo device is already configured in Home Assistant.",
+      "reconfigure_successful": "Reconfiguration was successful."
     }
   },
   "options": {
     "step": {
       "init": {
         "title": "Aquilo Options",
-        "description": "Adjust integration settings.",
+        "description": "Adjust integration settings and IP address.",
         "data": {
+          "host": "Device IP or Hostname",
           "scan_interval": "Update Interval (seconds)"
         }
       }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Aquilo device. Verify IP address."
     }
   },
   "entity": {

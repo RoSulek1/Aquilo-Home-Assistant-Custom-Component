@@ -20,8 +20,8 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up Aquilo from a config entry."""
     hass.data.setdefault(DOMAIN, {})
 
-    host = entry.data[CONF_HOST]
-    name = entry.data[CONF_NAME]
+    host = entry.options.get(CONF_HOST, entry.data.get(CONF_HOST, ""))
+    name = entry.data.get(CONF_NAME, "Aquilo")
     scan_interval = entry.options.get(
         CONF_SCAN_INTERVAL, entry.data.get(CONF_SCAN_INTERVAL, DEFAULT_SCAN_INTERVAL)
     )

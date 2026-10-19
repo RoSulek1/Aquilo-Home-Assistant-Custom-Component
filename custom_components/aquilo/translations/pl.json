@@ -9,6 +9,14 @@
           "name": "Nazwa zbiornika (np. Szambo)",
           "scan_interval": "Częstotliwość odpytywania (w sekundach)"
         }
+      },
+      "reconfigure": {
+        "title": "Zmień konfigurację urządzenia Aquilo",
+        "description": "Zaktualizuj adres IP lub parametry czujnika Aquilo.",
+        "data": {
+          "host": "Adres IP lub nazwa hosta urządzenia",
+          "scan_interval": "Częstotliwość odpytywania (w sekundach)"
+        }
       }
     },
     "error": {
@@ -17,18 +25,23 @@
       "unknown": "Wystąpił nieoczekiwany błąd."
     },
     "abort": {
-      "already_configured": "To urządzenie Aquilo jest już skonfigurowane w Home Assistant."
+      "already_configured": "To urządzenie Aquilo jest już skonfigurowane w Home Assistant.",
+      "reconfigure_successful": "Pomyślnie zaktualizowano konfigurację urządzenia."
     }
   },
   "options": {
     "step": {
       "init": {
         "title": "Opcje Aquilo",
-        "description": "Dostosuj parametry integracji.",
+        "description": "Dostosuj parametry integracji i adres IP.",
         "data": {
+          "host": "Adres IP lub nazwa hosta urządzenia",
           "scan_interval": "Częstotliwość odpytywania (w sekundach)"
         }
       }
+    },
+    "error": {
+      "cannot_connect": "Nie udało się połączyć z czujnikiem Aquilo pod nowym adresem IP."
     }
   },
   "entity": {

@@ -109,17 +109,17 @@ Home Assistant custom component for the **Aquilo Septic Tank & Water Level Monit
     }
   };
 
-  const gitPushCommands = `# 1. Sprawdź pliki gotowe do commita
+  const gitPushCommands = `# 1. Sprawdź zmodyfikowane i dodane pliki
 git status
 
-# 2. Dodaj wszystkie pliki integracji Aquilo
-git add custom_components/ hacs.json README.md LICENSE
+# 2. Dodaj katalog brand z ikonami oraz poprawiony config_flow
+git add custom_components/ icon.png icon@2x.png logo.png images/ README.md
 
-# 3. Zacommituj zmiany
-git commit -m "feat: complete Aquilo custom component with config flow, coordinator and sensors"
+# 3. Zacommituj poprawki
+git commit -m "fix: resolve options flow 500 error and add brand icons for HA 2026+"
 
-# 4. Wypchnij do Twojego repozytorium na GitHubie
-git push -u origin main`;
+# 4. Wypchnij poprawki do Twojego repozytorium na GitHubie
+git push origin main`;
 
   return (
     <div className="space-y-8 max-w-5xl mx-auto pb-12">

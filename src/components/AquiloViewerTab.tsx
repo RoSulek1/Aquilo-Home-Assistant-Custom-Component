@@ -117,7 +117,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_e
     'config_flow.py': {
       title: 'config_flow.py',
       path: 'custom_components/aquilo/config_flow.py',
-      desc: 'Graficzny konfigurator w Home Assistant (Settings -> Devices & Services). Testuje połączenie z IP urządzenia i zapobiega duplikatom.',
+      desc: 'Konfigurator z obsługą OptionsFlow (naprawiony błąd 500) oraz ReconfigureFlow do zmiany adresu IP bez reinstalacji.',
       icon: Sliders,
       content: `"""Config flow for Aquilo Septic Tank Monitor integration."""
 from __future__ import annotations
@@ -130,7 +130,6 @@ import voluptuous as vol
 from homeassistant import config_entries
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.data_entry_flow import FlowResult
-from homeassistant.helpers.aiohttp_client import async_get_clientsession
 import homeassistant.helpers.config_validation as cv
 
 from .const import CONF_HOST, CONF_NAME, CONF_SCAN_INTERVAL, DEFAULT_NAME, DEFAULT_SCAN_INTERVAL, DOMAIN, MIN_SCAN_INTERVAL
@@ -138,32 +137,41 @@ from .const import CONF_HOST, CONF_NAME, CONF_SCAN_INTERVAL, DEFAULT_NAME, DEFAU
 class AquiloConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     VERSION = 1
 
-    async def async_step_user(self, user_input: Optional[Dict[str, Any]] = None) -> FlowResult:
-        errors: Dict[str, str] = {}
-        if user_input is not None:
-            host = user_input[CONF_HOST].strip()
-            name = user_input.get(CONF_NAME, DEFAULT_NAME).strip()
-            scan_interval = user_input.get(CONF_SCAN_INTERVAL, DEFAULT_SCAN_INTERVAL)
+    async def async_step_user(self, user_input=None) -> FlowResult:
+        ...
 
-            validation = await validate_aquilo_host(self.hass, host)
-            if validation["success"]:
-                sensor_id = validation["sensor_id"]
-                await self.async_set_unique_id(f"aquilo_{sensor_id}")
-                self._abort_if_unique_id_configured()
+    async def async_step_reconfigure(self, user_input=None) -> FlowResult:
+        """Obsługa kliknięcia 'Rekonfiguruj' w Home Assistant."""
+        entry = self._get_reconfig_entry()
+        ...
 
-                return self.async_create_entry(
-                    title=name,
-                    data={CONF_HOST: host, CONF_NAME: name, CONF_SCAN_INTERVAL: scan_interval},
-                )
-            else:
-                errors["base"] = validation.get("error", "cannot_connect")
+    @staticmethod
+    @callback
+    def async_get_options_flow(config_entry):
+        return AquiloOptionsFlowHandler(config_entry)
 
-        schema = vol.Schema({
-            vol.Required(CONF_HOST): cv.string,
-            vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
-            vol.Optional(CONF_SCAN_INTERVAL, default=DEFAULT_SCAN_INTERVAL): vol.All(vol.Coerce(int), vol.Range(min=MIN_SCAN_INTERVAL, max=3600)),
-        })
-        return self.async_show_form(step_id="user", data_schema=schema, errors=errors)`,
+class AquiloOptionsFlowHandler(config_entries.OptionsFlow):
+    """Bezpieczny handler opcji (brak błędu 500 w HA 2024+/2026+)."""
+    def __init__(self, config_entry=None):
+        self._custom_config_entry = config_entry
+
+    async def async_step_init(self, user_input=None) -> FlowResult:
+        # Pozwala zmienić IP oraz czas odpytywania
+        ...`,
+    },
+    'brand/icon.png': {
+      title: 'brand/icon.png',
+      path: 'custom_components/aquilo/brand/icon.png',
+      desc: 'Lokalne ikony marki w katalogu brand/ (zgodne z Home Assistant 2026.3+ i HACS) eliminujące komunikat "icon not available".',
+      icon: Layers,
+      content: `Pliki brandowe wygenerowane dla Home Assistant:
+- custom_components/aquilo/brand/icon.png (256x256)
+- custom_components/aquilo/brand/icon@2x.png (512x512)
+- custom_components/aquilo/brand/dark_icon.png (256x256)
+- custom_components/aquilo/brand/logo.png (320x200)
+- custom_components/aquilo/brand/logo@2x.png (640x400)
+- icon.png (root repozytorium dla HACS)
+- logo.png (root repozytorium dla GitHub)`,
     },
     'coordinator.py': {
       title: 'coordinator.py',
