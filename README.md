@@ -10,7 +10,7 @@
 [![GitHub Release](https://img.shields.io/github/v/release/RoSulek1/Aquilo-Home-Assistant-Custom-Component?style=for-the-badge&color=blue)](https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component/releases)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green.svg?style=for-the-badge)](LICENSE)
 
-Home Assistant custom component for the **Aquilo Septic Tank & Water Level Monitor** (Czujnik poziomu szamba i wody Aquilo).
+Home Assistant custom component for the **Aquilo Septic Tank & Water Level Monitor** (Czujnik poziomu szamba i wody Aquilo [https://aquilo.pl/]).
 
 This integration replaces manual YAML REST and template sensors with a native **UI Config Flow**, automatic device discovery, and clean sensor entities with proper device classes, units, and timestamps.
 
