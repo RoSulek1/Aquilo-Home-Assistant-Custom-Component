@@ -4,9 +4,9 @@
   "codeowners": ["@RoSulek1"],
   "config_flow": true,
   "documentation": "https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component",
-  "issue_tracker": "https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component/issues",
   "integration_type": "device",
   "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/RoSulek1/Aquilo-Home-Assistant-Custom-Component/issues",
   "requirements": [],
   "version": "2.0.1"
 }
